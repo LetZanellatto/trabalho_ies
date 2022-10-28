@@ -1,0 +1,40 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int tam = 4;
+void imprimir(int m[][4]){ //função que imprime a matriz
+    int i, j;
+    for(i=0; i<3; i++){
+        for(j=0; j<tam; j++){
+            printf("%2d ", m[i][j]);
+        }
+        printf("\n");
+    }
+}
+
+int somar_Linha(int mat[][4], int l){ //função que soma as linhas 
+    int i, soma = 0;
+
+    for(i= 0; i<tam; i++)
+        soma += mat[l][i];
+    return soma;
+}
+
+int main() {
+
+    int mat[3][4];
+    int i, j;
+
+    srand(time(NULL)); // gera números aleatórios entre 0 e 9 para preencher a matriz
+    for(i=0; i<3; i++){
+        for(j=0; j<tam; j++){
+            mat[i][j] = rand() % 10;
+        }
+    }
+    imprimir(mat);
+    
+    for(i=0; i<3; i++) // imprime a soma de todas as linhas da matriz
+        printf("Soma da linha %d: %d\n",i, somar_Linha(mat, i));
+
+    return 0;
+}
