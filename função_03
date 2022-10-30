@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <math.h>
+
+double fat (int n) {
+  int i; double f; // calcula o fatorial
+  for (f = i = 1; i <= n; i++)
+    f *= i;
+  return f;
+}
+
+double soma (double x) { //calcula 1 + x + x2/2! + x3/3!...
+  int i, n, k; double p, s = 0;
+  for (p = x, k = i = 1; i <= n; i++) {
+    s += 1 + p + p/fat(k);
+  }
+  
+  return s;
+}
+
+int main( ) {
+  int i, n; double x;
+  scanf ("%lf", &x);
+  while(soma(x) > pow(10,-6))
+    printf ("%g\n", soma(x));
+
+  return 0;
+}
