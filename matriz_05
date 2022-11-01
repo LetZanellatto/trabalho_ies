@@ -1,0 +1,28 @@
+#include <stdlib.h>
+#include <stdio.h>
+#define MAX 4
+void lemat(int mat[][MAX]){//função para ler matriz
+  int i,j;
+  
+     for(i=0; i<4; i++){
+        for(j=0; j<4; j++){
+        scanf("%d",&mat[i][j]);
+        }
+    }
+}
+
+void imprime(int mat[][MAX]){//função para imprimir a matriz
+    int i,j;
+    for(i=0;i<4;i++){
+        printf("%d ",mat[i][i]);
+    }
+}
+
+int main()
+{
+   int mat[MAX][MAX];
+    lemat(mat); 
+    imprime(mat);
+
+    return 0;
+}
