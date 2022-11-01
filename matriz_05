@@ -10,8 +10,16 @@ void lemat(int mat[][MAX]){//função para ler matriz
         }
     }
 }
-
 void imprime(int mat[][MAX]){//função para imprimir a matriz
+int i,j;
+for(i=0;i<3;i++){
+    for(j=0;j<3;j++){
+        printf("%d ",mat[i][j]);
+    }
+    printf("\n");
+    }
+}
+void imprime_diag_prin(int mat[][MAX]){//função para imprimir a diagonal principal da matriz
     int i,j;
     for(i=0;i<4;i++){
         printf("%d ",mat[i][i]);
@@ -20,9 +28,10 @@ void imprime(int mat[][MAX]){//função para imprimir a matriz
 
 int main()
 {
-   int mat[MAX][MAX];
-    lemat(mat); 
+    int mat[MAX][MAX];
+    lemat(mat);
     imprime(mat);
-
+    imprime_diag_prin(mat);
+  
     return 0;
 }
