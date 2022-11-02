@@ -1,0 +1,42 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define MAX 4
+
+void lemat(int mat[][MAX]){ //função para ler matriz
+  int i, j;
+  
+     for(i=0; i<4; i++){
+        for(j=0; j<4; j++){
+        scanf("%d",&mat[i][j]);
+
+        }
+        
+    }
+}
+void imprime(int mat[][MAX]){//função para imprimir a matriz
+int i,j;
+for(i=0;i<4;i++){
+    for(j=0;j<4;j++){
+        printf("%d ",mat[i][j]);
+    }
+    printf("\n");
+    }
+}
+void imprime_dig_sec(int mat[][MAX]){ //função para imprimir a diagonal secundaria da matriz
+  int l, tam;
+  
+    for(l=0;l<4;l++){
+      printf("%d ",mat[l] [tam -1 - l]);
+    
+    }
+}
+
+int main()
+{
+    int mat[MAX][MAX];
+    lemat(mat); 
+    imprime(mat);
+    imprime_dig_sec(mat);
+
+    return 0;
+}
