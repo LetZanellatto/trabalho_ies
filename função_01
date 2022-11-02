@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-    int potencia (int numero, int expoente) { função que eleva o x a enésima potencia
+    int potencia (int numero, int expoente) { //função que eleva o x a enésima potencia
     int resultado = 1;
     for (int i = 1; i <= expoente; i++) {
     resultado *= numero;
