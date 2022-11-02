@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+    int potencia (int numero, int expoente) { função que eleva o x a enésima potencia
+    int resultado = 1;
+    for (int i = 1; i <= expoente; i++) {
+    resultado *= numero;
+    
+}
+    return resultado;
+    
+}
+
+int main() {
+    
+    int numero, expoente;
+    scanf("%d %d", &numero, &expoente);
+    printf ("%d", potencia(numero,expoente));
+
+    return 0;
+}
