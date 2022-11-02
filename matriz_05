@@ -3,7 +3,6 @@
 #define MAX 4
 void lemat(int mat[][MAX]){//função para ler matriz
   int i,j;
-  
      for(i=0; i<4; i++){
         for(j=0; j<4; j++){
         scanf("%d",&mat[i][j]);
