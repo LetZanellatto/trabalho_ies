@@ -37,7 +37,7 @@ int soma_impar(int mat[][MAX]){ //função que verifica qual numero da matriz é
 int main()
 {
     int mat[MAX][MAX];
-
+    printf("Escolha os valores da matriz 3x3\n");
     lemat(mat); 
     imprime(mat);
     printf("A soma dos impares é: %d\n", soma_impar(mat));
