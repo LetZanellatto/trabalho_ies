@@ -34,4 +34,5 @@ Opção: a vista com 10% de desconto
 Opção: em duas vezes (preço da etiqueta)
 Opção: de 3 até 10 vezes com 3% de juros ao mês (somente para compras acima de R$ 100,00).
 Digitar o valor da compra e ir seguindo os paços descrito no programa.
+
 O IDE utilizado para desenvolver todos os códigos foi o Online GDB. É uma ferramenta de compilador e debugger onlinel para C, C++, Python, PHP, Ruby, C#, OCaml, VB, Perl, Swift, Prolog, Javascript, Pascal, HTML, CSS, JS.
