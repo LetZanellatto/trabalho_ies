@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
-//testei mudar o codiguin
+
 int laco(int x){//função que calcula o fatorial de x, atravez de um laço
     int aux=1;
     for(int i=x;i>0;i--){
