@@ -30,7 +30,7 @@ int maior (int mat[][MAX]){//função para verificar qual é o maior numero da m
             aux=mat[i][j];
         }
     }
-    printf("maior");
+    printf("maior ");
     return aux;
 }
  int menor (int mat[][MAX]){//função para verificar qual é o menor numero da matriz
@@ -42,14 +42,14 @@ int maior (int mat[][MAX]){//função para verificar qual é o maior numero da m
         }
     }
 }
-    printf("\nmenor\n");
+    printf("menor ");
     return aux;
 }    
    
 int main()
 {
     int mat[MAX][MAX];
-
+    printf("Digite os valores da matriz 3x3\n");
     lemat(mat); 
     imprime(mat);
     printf("%d\n",maior(mat));
