@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #define MAX 3
 
-void lemat(int mat[][MAX]){//função para ler matriz
+void lemat(int mat[][MAX]){//função para ler matriz, o usuario escolhe os valores da matriz
     int i,j,aux;
   
      for(i=0; i<3; i++){
