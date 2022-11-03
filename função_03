@@ -1,27 +1,22 @@
 #include <stdio.h>
 #include <math.h>
+#define MIN 0.000001
 
-double fat (int n) {
-  int i; double f; // calcula o fatorial
-  for (f = i = 1; i <= n; i++)
-    f *= i;
-  return f;
+float eulher(float x){ // calcula e^x = 1 + x + x2/2! + x3/3! + ...
+    float t = 1.0, s;
+    int j = 0;
+    scanf("%f", &x);
+    s = t;
+    while (fabs(t) >= MIN){
+        j = j + 1;
+        t = (t / j) * x;
+        s = s + t;
+    }
+    printf("%5.5lf\n", s);
 }
-
-double soma (double x) { //calcula 1 + x + x2/2! + x3/3!...
-  int i, n, k; double p, s = 0;
-  for (p = x, k = i = 1; i <= n; i++) {
-    s += 1 + p + p/fat(k);
-  }
-  
-  return s;
-}
-
-int main( ) {
-  int i, n; double x;
-  scanf ("%lf", &x);
-  while(soma(x) > pow(10,-6))
-    printf ("%g\n", soma(x));
-
-  return 0;
+int main(void){
+    float x;
+    eulher(x);
+    
+    return 0;
 }
