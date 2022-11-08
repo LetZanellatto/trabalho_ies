@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+void deslocar(char str[], char c, int pos){
+    int in;
+
+    for(in = strlen(str) + 1; in > pos; in--){
+        str[in] = str[in-1];
+    }
+    str[pos] = c;
+}
+
+int main(){
+
+    char str[25];
+    char c;
+    int pos;
+
+    printf("Entre com uma string\n");
+    scanf("%[^\n]%*C",str);
+
+  
+    printf("Entre com um caracter\n");
+    scanf("%c",&c);
+
+    printf("Entre com uma posicao\n");
+    scanf("%d",&pos);
+
+    printf("%s\n",str);
+
+    deslocar(str,c,pos-1);
+
+    printf("%s\n",str);
+
+
+    return 0;
+}
