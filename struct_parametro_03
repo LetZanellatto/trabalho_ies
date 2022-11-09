@@ -1,0 +1,45 @@
+#include <stdio.h>
+int lervet (int *vx) {
+    int i = 0;
+    
+    scanf ("%d", vx);
+    while (*vx >= 0){
+        i++;
+        scanf ("%d", ++vx);
+    };
+    
+    
+    return i;
+}
+
+int getmaior (int *vx, int n) {
+    int *last = vx+n, *m;
+    for (m = vx++; vx < last; vx++)
+    if (*vx > *m) m = vx;
+    return *m;
+}
+
+int getmenor (int *vx, int n) {
+    int *last = vx+n, *m;
+    for (m = vx++; vx < last; vx++)
+    if (*vx < *m) m = vx;
+    return *m;
+}
+int getmedia (int *vx, int n) {
+    int i, s;
+    for (i = s = 0; i < n; i++, vx++)
+    s += *vx;
+    return s/n;
+}
+
+int main()
+{
+    int v[100], n;
+    
+    n = lervet (v);
+    printf ("media = %d\n", getmedia (v, n));
+    printf ("menor = %d\n", getmenor (v, n));
+    printf ("maior = %d\n", getmaior (v, n));
+
+    return 0;
+}
