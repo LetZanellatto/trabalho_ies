@@ -1,0 +1,21 @@
+#include <string.h>
+#include <stdio.h>
+
+void print_string(char s[]) { //função que percorre a string e printa ela quando tiver um espaço em branco
+    int i;
+    for (i = 0; s[i] != '\0'; i++)
+        if(s[i] == ' ')
+            printf ("\n");
+        else 
+            printf("%c", s[i]);
+}  
+
+int main()
+{
+    char str[100];
+    scanf ("%[^\n]", str);
+    print_string(str);
+   
+
+    return 0;
+}
