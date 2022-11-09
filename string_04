@@ -1,0 +1,22 @@
+#include <stdio.h>
+#define MAX 100
+int main()
+{
+    char nome[MAX], endereco[MAX];
+    int telefone, idade;
+
+    printf("Digite seu nome: ");
+    scanf("%[^\n]%*c", nome);
+
+    printf("Digite seu endereço: ");
+    scanf("%[^\n]%*c", endereco);
+
+    printf("Digite seu número de telefone:  ");
+    scanf("%d", &telefone);
+    
+    printf("Digite sua idade: ");
+    scanf("%d", &idade);
+
+    printf("Seu nome é %s, você mora na %s, o seu telefone é %d e você tem %d anos.", nome, endereco, telefone, idade);
+
+return 0;
