@@ -1,0 +1,77 @@
+#include <string.h>
+#include <stdlib.h>
+#include <stdio.h>
+#define MAX 100
+typedef struct{//define todos as caracteristicas que a struct vai ter
+char nome[30]; 
+char endereco[100]; 
+char fone[10]; 
+char cep[10]; //esta como char devido  long int nao funcionar por nao encontrarmos o erro!
+} PESSOA;
+
+void lerdados(PESSOA v[],int *n){ //coleta todos os dados da struct
+  printf("qts pessoas\n");
+ scanf("%d%*C",n);
+    for(int i=0;i<*n;i++){
+        printf("nome\n");
+        scanf("%[^\n]%*c",v[i].nome);
+        printf("endereco\n");
+        scanf("%[^\n]%*c",v[i].endereco);
+        printf("fone\n");
+        scanf("%[^\n]%*c",v[i].fone);
+        printf("CEP\n");
+        scanf("%[^\n]%*c",v[i].cep);
+       
+    }
+}
+void print_nome(PESSOA v[],int *n){ //printa todos que começam com o mesmo caracter
+    char c;
+    printf("qual vai busca entre a galere\n");
+    scanf("%c",&c);
+    for(int i=0;i<*n;i++){
+        if(v[i].nome[0]==c)
+        printf("%s\n",v[i].nome);
+    }
+}
+void print_um(PESSOA v[],int *n){//printa todos os dados da pessoa que foi pesquisada pelo nome
+    char c[MAX];
+    int aux;
+    printf("qual vai busca jao\n");
+    scanf("%[^\n]%*c",c);
+    for(int i=0;i<*n;i++){
+        aux=strcmp(v[i].nome,c);
+        if(aux==0){
+        printf("este %s\n",v[i].nome);
+        printf("esti %s\n",v[i].endereco);
+        printf("esto %s\n",v[i].fone);
+        printf("estu %s\n",v[i].cep);
+        }
+    }
+}
+
+int main()
+{
+ PESSOA v[MAX];
+ int n,op;
+scanf("%d",&op);
+
+while(op!=0){
+    switch(op){
+        case 1:
+            lerdados(v,&n);
+            scanf("%d",&op);
+            break;
+
+        case 2:
+            print_nome(v,&n);
+            scanf("%d",&op);
+            break;
+        case 3:
+            print_um(v,&n);
+            scanf("%d",&op);
+            break;
+    
+}
+}
+    return 0;
+}
