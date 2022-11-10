@@ -1,0 +1,22 @@
+#include <stdio.h>
+void lervet(int vx[], int *px){
+    int i; 
+    scanf("%d", px);
+    for(i=0; i<*px;i++)
+    scanf("%d", &vx[i]);
+}
+
+void printvet(int vx[], int nx){
+    int i;
+    for(i=0;i<nx;i++)
+    printf("As notas são: %d\n", vx[i]);
+}
+int main()
+{
+    int v[10], caso;
+    printf("Quantas notas são? ");
+    lervet(v, &caso);
+    printvet(v, caso);
+
+    return 0;
+}
