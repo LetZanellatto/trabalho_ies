@@ -7,7 +7,7 @@ scanf("%[^\n]%*C",l);
     
 }
 
-void achavazio(char l[], char x){
+void achavazio(char l[], char x){ // função que devolve o endereço do primeiro caracter branco encontrado
 int n;
 n=strlen(l);
      for(int i=0;i<=n;i++){
