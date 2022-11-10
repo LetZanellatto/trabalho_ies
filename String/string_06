@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int length (char *s) {
+int length (char *s) { //função que conta string 
     char *p, flag = 0, count = 0;
     p = s;
   
