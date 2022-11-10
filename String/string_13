@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 #define MAX 100
-int converte(char num[], int base){
+int converte(char num[], int base){// função que recebe um n e a sua base e converte o n na base decimal
 int aux,aux2,n,i;
 n=strlen(num)-1;
     for(n,i;n>=0;n--,i++){
