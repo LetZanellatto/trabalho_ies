@@ -1,5 +1,5 @@
 #include <stdio.h>
-int lervet (int *vx) {
+int lervet (int *vx) { //função para ler os valores dos vetores e parar de ler quando é digitado um numero negativo
     int i = 0;
     
     scanf ("%d", vx);
@@ -12,20 +12,20 @@ int lervet (int *vx) {
     return i;
 }
 
-int getmaior (int *vx, int n) {
+int getmaior (int *vx, int n) {//função para pegar o maior valor do vetor
     int *last = vx+n, *m;
     for (m = vx++; vx < last; vx++)
     if (*vx > *m) m = vx;
     return *m;
 }
 
-int getmenor (int *vx, int n) {
+int getmenor (int *vx, int n) {//função para pegar o menor valor do vetor
     int *last = vx+n, *m;
     for (m = vx++; vx < last; vx++)
     if (*vx < *m) m = vx;
     return *m;
 }
-int getmedia (int *vx, int n) {
+int getmedia (int *vx, int n) {//função para pegar a media dos valores
     int i, s;
     for (i = s = 0; i < n; i++, vx++)
     s += *vx;
