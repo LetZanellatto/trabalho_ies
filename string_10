@@ -1,14 +1,14 @@
 #include <string.h>
 #include <stdio.h>
 
-void delete (char str[], char *c){
+void delete (char str[], char *c){ //função para ler uma string e deletar o cacarter declarado
     char aux[100], dst[100]; int i, j;
     for(i=j=0; i<strlen(str); i++){
         if(str[i] != *c){
-            aux[j++] = str[i];  
+            aux[j++] = str[i];  //passa a string com o caracter deletado para uma string auxuliar
         }
     }
-    strcpy(dst, aux);
+    strcpy(dst, aux); // copia a string aux para a dst
     printf("%s", dst);
 }
 
