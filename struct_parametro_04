@@ -1,12 +1,12 @@
 #include <stdio.h>
-void lervet(int vx[], int *px){
+void lervet(int vx[], int *px){//função para ler o vetor
     int i; 
     scanf("%d", px);
     for(i=0; i<*px;i++)
     scanf("%d", &vx[i]);
 }
 
-void printvet(int vx[], int nx){
+void printvet(int vx[], int nx){//função para printar o vetor
     int i;
     for(i=0;i<nx;i++)
     printf("As notas são: %d\n", vx[i]);
