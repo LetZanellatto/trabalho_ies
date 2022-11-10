@@ -44,6 +44,13 @@ void bubble(PRODUTO x[], int n)//realiza um boublesort para organizar em ordem a
     }
      
 }
+void inflacao(PRODUTO v[], int *n){
+    for (int i=0;i<*n;i++){
+        if (v[i].preco <100){
+            v[i].preco+= v[i].preco * 0.05;
+        }
+    }
+}
 void mostrarVet( PRODUTO *p,int *n ){
 
 		int i;
@@ -64,6 +71,9 @@ int main()
     int n;
     lerdados(v,&n);
     bubble(v,n);
+    inflacao(v,&n);
     mostrarVet(v,&n);
     return 0;
 }
+
+
