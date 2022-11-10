@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int length (char *s) {
+    char *p, flag = 0, count = 0;
+    p = s;
+  
+    if (*p == '\0') return 0; 
+    else if (*p != ' ') count ++;
+  
+    for (; *p != '\0' ; p++){
+        if (*p == ' ') flag = 1;// se tiver um espaço em branco conta mais um
+        if (flag == 1 && *p != ' '){ //se depois do espaco em branco for um caracter, vira zero
+            flag = 0;
+            count ++;
+    } 
+  }
+    return count;
+}
+
+int main () {
+    char str[100];
+    scanf ("%[^\n]", str);
+    printf ("tamanho = %d\n", length (str));
+    return 0;
+}
