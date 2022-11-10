@@ -1,0 +1,69 @@
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#define MAX 100
+
+typedef struct 
+{ 
+char nome[80]; 
+float preco; 
+} PRODUTO; 
+
+void lerdados(PRODUTO v[], int *n){//cadastra n(o qual é definido pelo usuario) produtos
+    printf("quatos produtos deseja cadastrar\n");
+ scanf("%d%*C",n);
+    for(int i=0;i<*n;i++){
+        printf("nome\n");
+        scanf("%[^\n]%*c",v[i].nome);
+        printf("preco\n");
+        scanf("%f%*C",&v[i].preco);
+    }
+}
+
+void bubble(PRODUTO x[], int n)//realiza um boublesort para organizar em ordem alfabetica os produtos
+  {
+      PRODUTO troca,aux;
+      int i, j ;
+
+   for (i = n-1; i > 0; i--)
+    {
+      // o maior valor entre x[0] e x[i] vai para a posição x[i]
+
+      for (j =0 ; j <= i-1; j++)
+      {
+
+        if (strcmp(x[j].nome,x[j+1].nome)>0)
+        {
+          aux = x[j];
+          x[j] = x[j+1];
+          x[j+1] = aux;
+        }
+      }
+
+    
+    }
+     
+}
+void mostrarVet( PRODUTO *p,int *n ){
+
+		int i;
+
+		for ( i=0; i <*n ; i++ ){
+
+			printf("\tnome: %s\n",p->nome);
+			printf("\tPreco.: %.2f\n\n",p->preco);
+			p++;
+
+		}
+
+	}
+
+int main()
+{
+    PRODUTO v[MAX];
+    int n;
+    lerdados(v,&n);
+    bubble(v,n);
+    mostrarVet(v,&n);
+    return 0;
+}
