@@ -2,23 +2,21 @@
 #include <stdio.h>
 #define MAX 100
 
-int imprime_inver(char str[], int n){
+int imprime_inver(char str[], int n){// função para inverter a string
     if (n<0)
         return 0;
     else{
         printf("%c",str[n]);
         return imprime_inver(str,n-1);
     }
-    
 }
-int imprime_norm(char str[], int n,int aux){
+int imprime_norm(char str[], int n,int aux){//função que imprime a string
     if (aux>n)
         return 0;
     else{
         printf("%c",str[aux]);
         return imprime_norm(str,n,aux+1);
-    }
-    
+    } 
 }
 
 int main()
