@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <string.h>
+#define MAX 100
+
+void copia_string (char sa[], char sb[]) {
+    
+    int i, x;
+    x = strlen(sa);
+    
+    for(i=0; i<x; i++) {
+      sb[i] = sa[i];
+      
+    }
+}
+
+int main() {
+    
+    char str[100], tok [100];
+    scanf("%[^\n]%*c", str);
+    copia_string (str,tok);
+    printf("essa eh a string copiada: %s\n", tok);
+    
+    return 0;
+}
