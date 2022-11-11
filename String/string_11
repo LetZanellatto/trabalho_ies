@@ -3,7 +3,7 @@
 #include <string.h>
 
 void deslocar(char str[], char c, int pos){ //função que que receba uma string, um caracter e o índice de uma posição da string e insira o caracter na posição
-"empurrando" todos os demais para o lado
+//"empurrando" todos os demais para o lado
 
     int in;
     for(in = strlen(str) + 1; in > pos; in--){
