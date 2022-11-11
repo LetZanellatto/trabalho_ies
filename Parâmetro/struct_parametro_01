@@ -4,7 +4,7 @@ void operacoes_numeros (int *a, int *b) {
     
     scanf("%d %d", a, b);
     
-    printf("entre com dois numeros: \n");
+    printf("entre com dois numeros:\n");
     printf("soma = %d\n", *a + *b);
     printf("diferenca = %d\n", *a - *b);
     printf("produto = %d\n", *a * *b);
