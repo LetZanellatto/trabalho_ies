@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int razao (int *a, int *b){ // função que divide dois números. 
+    (*a)/(*b);
+    if(*b!=0 || *a!=0 && *b!=0) { //se a divisão der certo retorna 1.
+        return 1;
+    }
+    else { //caso contrário retorna 0.
+        return 0;
+    }
+}
+
+int main() {
+    
+    int a, b;
+    scanf("%d %d", &a, &b);
+    printf("%d", razao(&a,&b));
+
+    return 0;
+}
