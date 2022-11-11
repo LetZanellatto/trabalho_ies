@@ -1,0 +1,108 @@
+#include <string.h>
+#include <stdio.h>
+#define MAX 100
+
+typedef struct{
+    char nome[MAX];
+    char snome[MAX];
+}PESSOA;
+
+void lerdados(PESSOA v[],int *n){ //para parar a função é necessário digitar fim acrescido de um espaço em branco.
+char aux[MAX]="FIM",aux2[MAX];
+    for(int i=0;i<=20;i++){   
+    scanf("%[^' ']%*c",aux2);
+    scanf("%[^\n]%*c",v[i].snome);
+    if(strcmp(aux,aux2)!=0)
+    strcpy(v[i].nome,aux2);
+    else 
+    i=21;
+    }
+}
+void pnome(PESSOA v[],int *n){// função para printar o primeiro nome das pessoas.
+    for(int i=0;i<*n;i++){    
+        printf("%s\n",v[i].nome);
+    }
+}
+
+void psnome(PESSOA v[],int *n){//função para printar os sobrenomes das pessoas.
+    for(int i=0;i<*n;i++){    
+        printf("%s\n",v[i].snome);
+    }
+}
+void bubblen(PESSOA x[], int n)//realiza um bubble sort para organizar em ordem alfabética os nomes.
+  {
+      PESSOA aux;
+      int i, j ;
+
+   for (i = n-1; i > 0; i--)
+    {
+      for (j =0 ; j <= i-1; j++)
+      {
+
+        if (strcmp(x[j].nome,x[j+1].nome)>0)
+        {
+          aux = x[j];
+          x[j] = x[j+1];
+          x[j+1] = aux;
+        }
+      }
+
+    
+    }
+     
+}
+void bubblesn(PESSOA x[], int n)//realiza um bubble sort para organizar em ordem alfabética os sobrenomes.
+  {
+      PESSOA aux;
+      int i, j ;
+
+   for (i = n-1; i > 0; i--)
+    {
+
+      for (j =0 ; j <= i-1; j++)
+      {
+
+        if (strcmp(x[j].snome,x[j+1].snome)>0)
+        {
+          aux = x[j];
+          x[j] = x[j+1];
+          x[j+1] = aux;
+        }
+      }
+
+    
+    }
+}
+int contan(PESSOA v[],int *n){//realiza a contagem de caracteres em todos os nomes e faz a média.
+    int aux=0;
+    for (int i=0;i<*n;i++){
+    aux +=strlen(v[i].nome);
+    }
+    return aux/ *n;
+}
+int main()
+{
+    PESSOA str[MAX];
+    int n,op;
+    printf("digite o nome das pessoas:\n");    
+    lerdados(str,&n);
+    printf("digite a quantidade de pessoas que vc adicionou:\n");
+    scanf("%d",&n);
+    bubblen(str,n);
+    bubblesn(str,n);
+    printf("\tescolha uma opção:\n\t1-imprimir os nomes e a media dos de caracters\n\t2-imprimir os sobrenomes\n");
+    scanf("%d",&op);
+    switch(op){
+        case 1:
+        pnome(str,&n);
+        printf("essa é a media de caracteres: %d\n",contan(str,&n));
+        break;
+        case 2:
+        psnome(str,&n);
+        break;
+        default :
+        printf("opicao invalida");
+        break;
+    }
+    return 0;
+}
