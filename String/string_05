@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <string.h>
+
+    // função que compara se a string guardada é igual a SIM ou NAO e faz o retun equivalente.
+
+    int str_keep (char v[]) {
+        
+    scanf ("%[^\n]%*c", v);
+    
+    if (strcmp ("SIM", v) == 0) 
+    
+        return 0;
+        
+    else if (strcmp("NAO", v) == 0)
+    
+        return 1;
+        
+    else
+    
+        return -1;
+}
+
+int main() {
+    
+    char v[100];
+    printf("%d", str_keep (v));
+
+    return 0;
+}
