@@ -5,6 +5,9 @@ Integrantes:
 Bruna Luiza Stefanelli Eyng (brrunaeyng123@gmail.com)
 Guilherme Silva Altarugio (guilhermealtarugio@gmail.com)
 Leticia Zanellatto de Oliveira (leticia.oliveira21@unioeste.br)
+
+O IDE utilizado para desenvolver todos os códigos foi o Online GDB. É uma ferramenta de compilador e debugger online para C, C++, Python, PHP, Ruby, C#, OCaml, VB, Perl, Swift, Prolog, Javascript, Pascal, HTML, CSS, JS.
+
 Exercícios:
 Matrizes - foram feitos os seis exercícios do grupo de matrizes da lista, todos pediam para ler e printar uma matriz.
 matriz_01 - além de ler e printar, tem que printar a soma dos números ímpares da matriz. Basta apenas executar o programa e digitar os valores da matriz.
@@ -34,5 +37,3 @@ Opção: a vista com 10% de desconto
 Opção: em duas vezes (preço da etiqueta)
 Opção: de 3 até 10 vezes com 3% de juros ao mês (somente para compras acima de R$ 100,00).
 Digitar o valor da compra e ir seguindo os passos descrito no programa.
-
-O IDE utilizado para desenvolver todos os códigos foi o Online GDB. É uma ferramenta de compilador e debugger online para C, C++, Python, PHP, Ruby, C#, OCaml, VB, Perl, Swift, Prolog, Javascript, Pascal, HTML, CSS, JS.
