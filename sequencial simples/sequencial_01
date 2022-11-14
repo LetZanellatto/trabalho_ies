@@ -1,1 +1,28 @@
+#include <stdio.h>
+void decimetro(int valor){
+    int a; 
+    a = valor*10;
+    printf("O valor em decímetro é %d\n", a);
+}
+void centimrtro(int valor){
+    int a; 
+    a = valor*100;
+    printf("O valor em centímetro é %d\n", a);
+}
+void milimitro(int valor){
+    int a; 
+    a = valor*1000;
+    printf("O valor em milímitro é %d", a);
+}
+int main()
+{
+    int valor;
+    
+    printf("Qual é o valor em metros? ");
+    scanf("%d", &valor);
+    decimetro(valor);
+    centimrtro(valor);
+    milimitro(valor);
 
+    return 0;
+}
