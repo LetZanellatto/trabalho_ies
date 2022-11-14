@@ -1,0 +1,38 @@
+#include <math.h>
+#include <stdio.h>
+
+void soma(int a, int b){
+    return a+b;
+}
+int produto(int a, int b){
+    return a*(b*b);
+}   
+int quadrado (int a){
+    return (a*a);
+}
+float raiz(int a, int b){
+    int c; float d;
+    c = ((a*a)+(b*b));
+    d = sqrt(c);
+    return d;
+}
+float seno(int a, int b){
+    return sin(a-b);
+}
+int modulo(int a){
+    if (a<0) return a * (-1);
+    else return a;
+}
+int main()
+{
+    int valor1, valor2;
+    scanf("%d %d", &valor1, &valor2);
+    printf("SOMA = %d\n", soma(valor1, valor2));
+    printf("PRODUTO DO PRIMEIR PELO QUADRADO DO SEGUNDO = %d\n", produto(valor1, valor2));
+    printf("QUADRADO DO PRIMERO = %d\n", quadrado(valor1));
+    printf("A RAIZ QUADRADA DA SOMA DOS QUADRADOS = %.2f\n", raiz(valor1, valor2));
+    printf("O SENO DA DIFERENÇA DO PRIMEIRO PELO SEGUNDO = %.2f\n", seno(valor1, valor2));
+    printf("O MODULO DO PRIMEIRO = %d", modulo(valor1));
+    
+    return 0;
+}
