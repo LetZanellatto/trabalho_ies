@@ -1,0 +1,33 @@
+#include <stdio.h>
+#define MAX 100
+int lerdados (int v[],int n){
+     
+    for(int i=0;i<n;i++){
+        scanf("%d",&v[i]);        
+    }
+    
+}
+int media (int v[],int n){
+    int aux=0;
+    for(int i=0;i<n;i++){
+        aux+=v[i];        
+    }
+   for(int i=0;i<n;i++){
+        if(v[i]==aux/n){
+            return v[i];
+        }         
+    }
+     printf("nao foi encontrado um valor igual a media\n\n");
+    return 0;
+}
+
+
+int main()
+{
+    int v[MAX],n;
+    printf("digite quantos valores voce deseja cadastrar:");
+    scanf("%d",&n);
+    lerdados(v,n);
+    printf("%d",media(v,n));
+    return 0;
+}
