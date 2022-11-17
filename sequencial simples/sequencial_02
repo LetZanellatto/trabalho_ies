@@ -1,0 +1,16 @@
+#include <stdio.h>
+int calcula_tabuada(){
+    int multiplicador,multiplicador2,resultado;
+    for(multiplicador=0;multiplicador<10;multiplicador++){
+        for(multiplicador2=0;multiplicador2<10;multiplicador2++){
+            printf("%d x %d = %d\n",multiplicador,multiplicador2,resultado=multiplicador*multiplicador2);
+        }
+    }
+    
+}
+int main()
+{
+calcula_tabuada();
+
+    return 0;
+}
