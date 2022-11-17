@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main(){
+   int v,n;
+   printf("digite o valor:\n");
+   scanf("%d",&v);
+   while(v>100){
+      n = v + (v*0.2);
+       printf("adicionado os 20%% de juros: %d",n);
+       break;
+   }
+   while(v<=100){
+      n = v+ (v*0.1);
+       printf("adicionado os 10%% de juros: %d",n);
+       break;
+   }
+   return 0;
+   
+}
