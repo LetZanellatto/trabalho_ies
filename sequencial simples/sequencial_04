@@ -1,0 +1,12 @@
+#include <stdio.h>
+int converte_Celsius(){
+    double grau;
+    scanf("%lf",&grau);
+    printf("essa temperatura em Celsius é :%.1lf",(grau - 32) * 5/9);
+}
+int main()
+{
+ converte_Celsius();
+
+    return 0;
+}
