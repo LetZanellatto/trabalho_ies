@@ -1,0 +1,26 @@
+#include <stdio.h>
+void lervet (float vx[], int *px) { //função que le o tamanho do vetor e os numeros deles 
+    int i;
+    scanf ("%d", px);
+    for (i = 0; i < *px; i++)
+    scanf ("%f", &vx[i]);
+}
+float getsoma (float vx[], int nx) { // faz a soma dos valores do vetor
+    int i; float s;
+    for (s = i = 0; i < nx; i++)
+    s += vx[i];
+    return s;
+}
+float getmedia (float vx[], int nx) {// faz a media dos vetores
+    if (nx == 0) return 0;
+    return getsoma(vx, nx)/nx;
+}
+
+int main(){
+    float v[100], media; int n;
+    lervet (v, &n);
+    printf ("media = %.2f\n", media = getmedia (v, n));
+    
+    
+    return 0;
+}
