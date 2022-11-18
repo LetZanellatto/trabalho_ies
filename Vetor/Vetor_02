@@ -1,34 +1,41 @@
 #include <stdio.h>
 
-    void lervet (int vx[]) {//lê o vetor
+    void lervet (int vx[], int n) {//lê o vetor
     int i;
-    for (i = 0; i < 10; i++)
+    for (i = 0; i < n; i++)
     scanf ("%d", &vx[i]);
 }
 
-    int getmaior (int vx[]) {//encontra e retorna o maior numero do vetor
-    int i,maior = vx[0];
-    for (i = 0;i < 10;i++){
-    if (vx[i] > maior) 
-    maior = vx[i];
-    }
-    return maior;
+  void trocar (int *px, int *py) {//função para trocar de posiçoes 
+    int temp;
+    temp = *px;
+    *px = *py;
+    *py = temp;
 }
 
-    int getmenor (int vx[]) { //encontra e retorna o menor numero do vetor
-    int i; int m;
-    for (m = vx[0], i = 1; i <= 10; i++){
-    if (vx[i] < m) m = vx[i];
-    }
-    return m;
+  void crescente (int vx[], int n) {//transfoma o vetor em crescente
+    int i, j;
+    for(i = n - 1; i > 0; i--)
+    for(j = 0; j < i; j++)
+    if(vx[j] > vx[j+1])
+    trocar(&vx[j], &vx[j+1]);
+    
+};
+
+  void printvet (int vx[], int n) {//imprime o vetor
+    int i;
+    for (i = 0; i < n; i++)
+      printf ("%d\n", vx[i]);
 }
 
 int main() {
     
-    int va[100];
-    lervet (va);
-    printf ("maior = %d\n", getmaior(va));
-    printf ("menor = %d\n", getmenor(va));
+    int va[10]; int n;
+    printf("digite o tamanho do vetor: \n");
+    scanf("%d", &n);
+    lervet (va,n);
+    crescente(va,n);
+    printvet(va,n);
 
     return 0;
 }
