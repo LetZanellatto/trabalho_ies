@@ -15,7 +15,7 @@
     return maior;
 }
 
-    int getmenor (int vx[]) { encontra e retorna o menor numero do vetor
+    int getmenor (int vx[]) { //encontra e retorna o menor numero do vetor
     int i; int m;
     for (m = vx[0], i = 1; i <= 10; i++){
     if (vx[i] < m) m = vx[i];
