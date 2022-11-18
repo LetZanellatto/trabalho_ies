@@ -1,0 +1,41 @@
+#include <stdio.h>
+
+    void lervet (int vx[], int n) {//lê o vetor
+    int i;
+    for (i = 0; i < n; i++)
+    scanf ("%d", &vx[i]);
+}
+
+  void trocar (int *px, int *py) {//função para trocar de posiçoes 
+    int temp;
+    temp = *px;
+    *px = *py;
+    *py = temp;
+}
+
+  void crescente (int vx[], int n) {//transfoma o vetor em crescente
+    int i, j;
+    for(i = n - 1; i > 0; i--)
+    for(j = 0; j < i; j++)
+    if(vx[j] > vx[j+1])
+    trocar(&vx[j], &vx[j+1]);
+    
+};
+
+  void printvet (int vx[], int n) {//imprime o vetor
+    int i;
+    for (i = 0; i < n; i++)
+      printf ("%d\n", vx[i]);
+}
+
+int main() {
+    
+    int va[10]; int n;
+    printf("digite o tamanho do vetor: \n");
+    scanf("%d", &n);
+    lervet (va,n);
+    crescente(va,n);
+    printvet(va,n);
+
+    return 0;
+}
