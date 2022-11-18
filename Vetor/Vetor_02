@@ -27,8 +27,8 @@ int main() {
     
     int va[100];
     lervet (va);
-    printf ("%d\n", getmaior(va));
-    printf ("%d\n", getmenor(va));
+    printf ("maior = %d\n", getmaior(va));
+    printf ("menor = %d\n", getmenor(va));
 
     return 0;
 }
