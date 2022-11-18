@@ -115,3 +115,57 @@ programa deve ter um menu com as seguintes opções:
 2 - Imprimir na tela os dados de uma das pessoas cadastradas (consulta por nome)
 3 - Imprimir na impressora a lista dos nomes que começam pela letra indicada
 // Ao executar o programa é necessário aparecer os dados das pessoas e imprimir a letra que o usuário forneceu.
+
+Exercícios da terceira Iteração
+Programa sequenciais simples
+sequencial_01. Fazer um programa em C que pergunta um valor em metros e imprime o correspondente em decímetros, centímetros e milímetros. // Ao rodar o programa, apena digite um valor e clica em enter que aparecera o valor em centímetro, milímetros e decímetros.
+
+sequencial_02. Fazer um programa em C que imprime uma tabela com a tabuada de 1 a 9. // Ao rodar o programa a tabuada já será exibida na tela.
+
+sequencial_03. Fazer um programa que solicita um número decimal e imprime o correspondente em hexa e octal. // Ao rodar o programa, basta escrever um número e clicar no enter que ele irá aparecer em hexa e octadecimal.
+
+sequencial_04. Fazer um programa em "C" que pergunte um valor em graus Fahrenheit e imprime no vídeo o correspondente em graus Celsius usando as fórmulas que
+seguem.
+a) Usar uma variável double para ler o valor em Fahrenheit e a fórmula C=(f-32.0) * (5.0/9.0).
+b) Usar uma variável int para ler o valor em Fahrenheit e a fórmula C=(f-32)*(5/9).
+//Ao rodar o programa, basta digitar o valor.
+
+sequencial_05. Fazer um programa em "C" que solicite 2 números e informe:
+a) A soma dos números;
+b) O produto do primeiro número pelo quadrado do segundo;
+c) O quadrado do primeiro número;
+d) A raiz quadrada da soma dos quadrados;
+e) O seno da diferença do primeiro número pelo segundo;
+f) O módulo do primeiro número.
+// Ao rodar o programa, basta digitar dois valores.
+
+Explorando os comandos de controle de fluxo
+controle_01. Faça um programa em "C" que lê dois valores e imprime:
+- se o primeiro valor for menor que o segundo, a lista de valores do primeiro até o segundo;
+- se o primeiro valor for menor que o segundo a lista de valores do segundo até o primeiro em ordem decrescente;
+- se ambos forem iguais a mensagem "valores iguais".
+// Ao rodar o programa, apenas digite dois valores.
+
+controle_02. Fazer um programa que imprime a tabela ASCII (código decimal, código hexa, caracter) para os códigos de 0 a 127. // Ao rodar o programa a tabela já ira aparecer na tela.
+
+controle_03. Fazer um programa em "C" que lê o preço de um produto e inflaciona esse preço em 10% se ele for menor que 100 e em 20% se ele for maior ou igual a 100.
+OBS: não use o comando "if" ou o operador de condição "?".
+//Ao rodar o programa, irá aparecer na tela para digitar um valor, após dimidiato apenas execute o programa que se o valor for maior ou igual que 100 automaticamente ele irá atribuir 20% de juros, caso contrário será apenas 10%.
+
+controle_04. Fazer um programa que lê um valor, um operador (+,-,*,/) e outro valor e imprime o resultado da expressão:
+<valor 1> <operador> <valor 2> // Ao rodar o programa, basta digitar um valor, um operador aritmético básico e outro valore, que o programa irá executar a conta com o operador escolhido. 
+
+controle_05. Escrever um programa em "C" que solicita as notas das duas provas feitas por cada um dos alunos de uma turma (as notas têm de estar no intervalo [0 10]) e imprime para cada um a média das notas. O programa deve parar imediatamente após ter sido digitado o valor 50 para a nota da primeira prova. // Ao rodar o programa, basta digitar duas notas que ele irá calcular a média, caso a nota 1 for 50, o programa para.
+
+Vetores
+Vetor_01. Fazer um programa em "C" que lê 10 valores e imprime o maior e o menor valores lidos. // Ao rodar o programa, o usuário terá que digitar 10 valores e o programa irá dizer qual é o maior e o menor. 
+
+Vetor_02. Fazer um programa que lê um conjunto de 10 valores e os imprime ordenados. // Ao rodar o programa, o usuário terá que digitar 10 valores aleatórios e o programa irá organizá-los de forma crescente. 
+
+Vetor_03. Fazer uma rotina que recebe como parâmetro um array de 5 posições contendo as notas de um aluno ao longo do ano e devolve a média do aluno. // Ao rodar o programa, o usuário terá que digitar 5 valores e o programa irá calcular a média deles.
+
+Vetor_04. Fazer uma rotina que recebe um array do tipo double e o número de valores que devem ser solicitados ao usuário e devolve o array preenchido com os valores digitados. // Ao rodar o programa, o usuário terá que digitar valores aleatórios que o programa irá devolver eles em forma de vetor.
+
+Vetor_05. Fazer um programa em "C" que lê um conjunto de 10 valores inteiros e verifica se algum dos valores é igual a média dos mesmos. // Ao rodar o programa, o usuário terá que digitar 10 valore, o programa irá calcular a média deles e verificar se ela é igual a algum dos valores digitado pelo usuário. 
+
+Vetor_06. Fazer um programa que lê valores para uma matriz do tipo "float" de 5 linhas por 3 colunas e imprime a diferença entre a média dos elementos das colunas pares e a média dos elementos das linhas ímpares. // Ao rodar o programa, o usuario irá digitar os valores da matriz 5x3 e logo em seguida o programa irá retornar a diferença entre a média dos elementos das colunas pares e a média dos elementos das linhas ímpares.
